@@ -1,0 +1,711 @@
+* commit 1b95cf34213ca16ed814a0206a135ffb529f0c34 (HEAD -> dev, origin/dev)
+| Author: Nathan Foote <nfoote.alt@gmail.com>
+| Date:   Sun Mar 12 04:08:43 2017 -0400
+| 
+|     base/tower functionality & minions
+|  
+* commit c66da31e8a8a358883c62e4709ca2d06eb067c03
+| Author: Nathan Foote <nfoote.alt@gmail.com>
+| Date:   Sun Mar 12 01:44:05 2017 -0500
+| 
+|     tower lazer
+|    
+*   commit b1801dd96d2ab972d89b970a93d386670f81cd10
+|\  Merge: 77d6bf2 05c4d55
+| | Author: Nathan Foote <nfoote.alt@gmail.com>
+| | Date:   Sat Mar 11 23:44:23 2017 -0500
+| | 
+| |     Merge branch 'dev' of https://github.com/Necropuppy/WebGame into dev
+| |   
+| * commit 05c4d550528156e0d2ac742f683e62bdde265156
+| | Author: Arda Pekis <github@ardapekis.com>
+| | Date:   Sat Mar 11 23:06:32 2017 -0500
+| | 
+| |     Add minions
+| |   
+| * commit fa1bbf5a7c8f10a2fd7310050ffe9791dd8c23b6
+| | Author: Arda Pekis <github@ardapekis.com>
+| | Date:   Sat Mar 11 15:32:40 2017 -0500
+| | 
+| |     Change positions of towers and bases.
+| |   
+| * commit a08f7dc9b8add95c3c368a9b4ef75cb6bec9db4f
+| | Author: Arda Pekis <github@ardapekis.com>
+| | Date:   Sat Mar 11 15:23:10 2017 -0500
+| | 
+| |     Offset collision
+| |   
+* | commit 77d6bf24e439adf66c815646f6d562d2095297f3
+|/  Author: Nathan Foote <nfoote.alt@gmail.com>
+|   Date:   Sat Mar 11 23:44:18 2017 -0500
+|   
+|       something
+|      
+| *   commit a2bf02ccce82cddcabd7701d37f8f7192636b389 (origin/master, origin/HEAD)
+| |\  Merge: 06da6f8 9a3f1dd
+| |/  Author: Arda Pekis <ardapekis@users.noreply.github.com>
+|/|   Date:   Sat Mar 11 15:02:50 2017 -0500
+| |   
+| |       Merge pull request #23 from Necropuppy/dev
+| |       
+| |       Dev
+| |   
+* | commit 9a3f1ddd4911f1e108e46661fe915fa153472fbb
+| | Author: Nathan Foote <nfoote.alt@gmail.com>
+| | Date:   Sat Mar 11 14:04:21 2017 -0500
+| | 
+| |     hp and mp bars above players
+| |   
+* | commit 412699be73a3403d1fbde282e5ad982a8925cbee
+| | Author: Arda Pekis <github@ardapekis.com>
+| | Date:   Sat Mar 11 02:21:22 2017 -0500
+| | 
+| |     Server settings configurable
+| |   
+* | commit ec1bef293f596ca17b5aa962682c3601726bb2a2
+| | Author: Nathan Foote <nfoote.alt@gmail.com>
+| | Date:   Sat Mar 11 02:19:14 2017 -0500
+| | 
+| |     enable database
+| |     
+* |   commit 3a6101d1885b21fb34f7fc27ce91dd1e93eb5be3
+|\ \  Merge: acb21e5 18a465a
+| | | Author: Nathan Foote <nfoote.alt@gmail.com>
+| | | Date:   Sat Mar 11 02:18:14 2017 -0500
+| | | 
+| | |     merge
+| | |    
+| * | commit 18a465ae733d0d4157c7197479ca7517ce0c8e55
+| | | Author: Arda Pekis <github@ardapekis.com>
+| | | Date:   Sat Mar 11 00:33:15 2017 -0500
+| | | 
+| | |     Fix login issue
+| | |    
+| * | commit 523dc246c67702974e263e76e68ab70fcfd39dc3
+| | | Author: Arda Pekis <github@ardapekis.com>
+| | | Date:   Sat Mar 11 00:21:24 2017 -0500
+| | | 
+| | |     Fix mouse fire angle
+| | |    
+| * | commit 37cdcce10bdca8b2f8e5720159cd3b37c66b0670
+| | | Author: Arda Pekis <github@ardapekis.com>
+| | | Date:   Fri Mar 10 23:58:28 2017 -0500
+| | | 
+| | |     Add player collision
+| | |    
+* | | commit acb21e50212eef94c2f500f368565166ca2e21c2
+|/ /  Author: Nathan Foote <nfoote.alt@gmail.com>
+| |   Date:   Sat Mar 11 02:11:26 2017 -0500
+| |   
+| |       towers, bases, and teams
+| |   
+* | commit 607a6db0487f6f822152ff12a67bb8fea0c568d2
+| | Author: Nathan Foote <nfoote.alt@gmail.com>
+| | Date:   Fri Mar 10 22:45:22 2017 -0500
+| | 
+| |     UI
+| |   
+* | commit c693feb0a2c62ddbb0021ae68767ab53bd02a0a2
+| | Author: Nathan Foote <nfoote.alt@gmail.com>
+| | Date:   Fri Mar 10 13:32:50 2017 -0500
+| | 
+| |     add first UI plus Base and Tower object
+| |   
+* | commit f86b88218eb18965a2e2bdc45f3a9046ee256cb8
+| | Author: Nathan Foote <nfoote.alt@gmail.com>
+| | Date:   Mon Mar 6 14:24:44 2017 -0500
+| | 
+| |     fixed tile loading
+| |   
+* | commit b56d3ec52f8d1ad0bf5e4ab311bdcd75105d64bb
+| | Author: Nathan Foote <nfoote.alt@gmail.com>
+| | Date:   Sat Mar 4 22:30:09 2017 -0500
+| | 
+| |     added map and player turning
+| |   
+* | commit 3e6fe8958b9fac7f31231e734dc87c596caecaa0
+| | Author: Arda Pekis <github@ardapekis.com>
+| | Date:   Sat Mar 4 03:14:03 2017 -0500
+| | 
+| |     Send map init only once
+| |   
+* | commit bbf1fe110546246c7b326bc3cb035707acc30928
+| | Author: Nathan Foote <nfoote.alt@gmail.com>
+| | Date:   Sat Mar 4 02:58:41 2017 -0500
+| | 
+| |     tile variables working
+| |     
+* |   commit 7e4537c515ad7dc9261a5c54129624114891b695
+|\ \  Merge: cce3832 0e5a12a
+| | | Author: Nathan Foote <nfoote.alt@gmail.com>
+| | | Date:   Sat Mar 4 02:24:38 2017 -0500
+| | | 
+| | |     Merge branch 'dev' of https://github.com/Necropuppy/WebGame into dev
+| | |      
+| * |   commit 0e5a12aca90603ff53d8b28c8d90229cbb4cf5eb
+| |\ \  Merge: dc388cb 9790d58
+| | | | Author: Arda Pekis <github@ardapekis.com>
+| | | | Date:   Sat Mar 4 01:56:48 2017 -0500
+| | | | 
+| | | |     Merge branch 'dev' of https://github.com/Necropuppy/WebGame into dev
+| | | |     
+| * | | commit dc388cbcaa33b8bbe5573a80a0e5942dd0a41296
+| | | | Author: Arda Pekis <github@ardapekis.com>
+| | | | Date:   Sat Mar 4 01:56:42 2017 -0500
+| | | | 
+| | | |     Move debug commands to config
+| | | |     
+* | | | commit cce38326967f7b91bfb3de9e7de16317a82d3fd6
+| |/ /  Author: Nathan Foote <nfoote.alt@gmail.com>
+|/| |   Date:   Sat Mar 4 02:24:27 2017 -0500
+| | |   
+| | |       fixed map
+| | |      
+* | |   commit 9790d580ce18a60ff4ae2a6450046a262bfc2077
+|\ \ \  Merge: 874e6ed 2f53635
+| |/ /  Author: Nathan Foote <nfoote.alt@gmail.com>
+| | |   Date:   Sat Mar 4 01:55:41 2017 -0500
+| | |   
+| | |       Merge branch 'dev' of https://github.com/Necropuppy/WebGame into dev
+| | |      
+| * |   commit 2f53635588e181f4025bef982c83696df054036c
+| |\ \  Merge: e0501fe 2760ef2
+| | | | Author: Arda Pekis <github@ardapekis.com>
+| | | | Date:   Sat Mar 4 01:46:47 2017 -0500
+| | | | 
+| | | |     Merge branch 'dev' of https://github.com/Necropuppy/WebGame into dev
+| | | |       
+| | * |   commit 2760ef2d5268922c6691363ad8a8c20a8133ebb9
+| | |\ \  Merge: 70d8931 ddc180c
+| | | | | Author: Arda Pekis <github@ardapekis.com>
+| | | | | Date:   Sat Mar 4 06:31:12 2017 +0000
+| | | | | 
+| | | | |     Merge branch 'dev' of github.com:Necropuppy/WebGame into dev
+| | | | |      
+| | * | | commit 70d893186f6c5644d693fdd91e36a9c8680f2699
+| | | | | Author: Arda Pekis <github@ardapekis.com>
+| | | | | Date:   Sat Mar 4 01:14:16 2017 -0500
+| | | | | 
+| | | | |     Add processed map file.
+| | | | |      
+| * | | | commit e0501feb2493fde6d82c07006548f75827b95f80
+| | | | | Author: Arda Pekis <github@ardapekis.com>
+| | | | | Date:   Sat Mar 4 01:43:59 2017 -0500
+| | | | | 
+| | | | |     Separate mouse movement from keypresses
+| | | | |      
+* | | | | commit 874e6ed446b25aee8fcbbd16cd95678dff5c7d99
+| |_|/ /  Author: Nathan Foote <nfoote.alt@gmail.com>
+|/| | |   Date:   Sat Mar 4 01:55:32 2017 -0500
+| | | |   
+| | | |       broken map
+| | | |       
+* | | |   commit ddc180cdd64eeb9393d99ea1b670242fdc16baa1
+|\ \ \ \  Merge: 903061a f3212d1
+| | | | | Author: Nathan Foote <nfoote.alt@gmail.com>
+| | | | | Date:   Sat Mar 4 01:14:33 2017 -0500
+| | | | | 
+| | | | |     Merge branch 'dev' of https://github.com/Necropuppy/WebGame into dev
+| | | | |      
+| * | | | commit f3212d1463dc50c503147699b7349f07b0fe8af4
+| | | | | Author: Arda Pekis <github@ardapekis.com>
+| | | | | Date:   Sat Mar 4 01:14:16 2017 -0500
+| | | | | 
+| | | | |     Add processed map file.
+| | | | |        
+| * | | |   commit 6351afeb3f9c533495d4d39db60eff27f729cf6b
+| |\ \ \ \  Merge: 85ad6e6 a007789
+| | | | | | Author: Arda Pekis <github@ardapekis.com>
+| | | | | | Date:   Sat Mar 4 01:10:18 2017 -0500
+| | | | | | 
+| | | | | |     Merge branch 'dev' of https://github.com/Necropuppy/WebGame into dev
+| | | | | |       
+| * | | | | commit 85ad6e6e5f06bdd515224f6c81a44ce01e25675d
+| | | | | | Author: Arda Pekis <github@ardapekis.com>
+| | | | | | Date:   Sat Mar 4 01:10:12 2017 -0500
+| | | | | | 
+| | | | | |     Ignore the config file
+| | | | | |       
+* | | | | | commit 903061aa2ef265998939e40a036d088cf77c14de
+| |/ / / /  Author: Nathan Foote <nfoote.alt@gmail.com>
+|/| | | |   Date:   Sat Mar 4 01:14:21 2017 -0500
+| | | | |   
+| | | | |       required Map
+| | | | |      
+* | | | | commit a007789a21284be7948368837f5e087b6fde0b2b
+|/ / / /  Author: Nathan Foote <nfoote.alt@gmail.com>
+| | | |   Date:   Sat Mar 4 01:09:38 2017 -0500
+| | | |   
+| | | |       fixed Map.onStart
+| | | |     
+* | | | commit 9439ea3048377e438c14bda0515f2381941ac790
+| |/ /  Author: Nathan Foote <nfoote.alt@gmail.com>
+|/| |   Date:   Sat Mar 4 01:04:50 2017 -0500
+| | |   
+| | |       fix mapInit typo
+| | |      
+* | |   commit 6bd4331f399c3364d1c0c74fe61f5490d909e4d6
+|\ \ \  Merge: 4471570 004faef
+| |/ /  Author: Nathan Foote <nfoote.alt@gmail.com>
+| | |   Date:   Sat Mar 4 01:00:58 2017 -0500
+| | |   
+| | |       Merge branch 'dev' of https://github.com/Necropuppy/WebGame into dev
+| | |    
+| * | commit 004faefb2e8bff718bced456118d2057807ffb61
+| | | Author: Arda Pekis <github@ardapekis.com>
+| | | Date:   Sat Mar 4 00:56:56 2017 -0500
+| | | 
+| | |     Stop player when focus is lost
+| | |    
+| * | commit 556105bd7fecc7df788945021bc6cada3e0ccd22
+| | | Author: Arda Pekis <github@ardapekis.com>
+| | | Date:   Sat Mar 4 00:07:07 2017 -0500
+| | | 
+| | |     Finish map processor
+| | |    
+* | | commit 4471570c90732c8ba582a466e95be7b13c0d1ef4
+|/ /  Author: Nathan Foote <nfoote.alt@gmail.com>
+| |   Date:   Sat Mar 4 01:00:53 2017 -0500
+| |   
+| |       added map
+| |   
+* | commit f1a2bb2a3da4b1f4ac4858d99ce221ff908f6685
+| | Author: Nathan Foote <nfoote.alt@gmail.com>
+| | Date:   Fri Mar 3 23:46:11 2017 -0500
+| | 
+| |     fullscreen 2
+| |   
+* | commit c9ac5e3f7ebcfc13ccd569d39e6918e78a357cad
+| | Author: Nathan Foote <nfoote.alt@gmail.com>
+| | Date:   Fri Mar 3 23:42:12 2017 -0500
+| | 
+| |     fullscreen
+| |   
+* | commit 1071c77ded3154f49bd366d8be488cb46b44af47
+| | Author: Arda Pekis <github@ardapekis.com>
+| | Date:   Thu Mar 2 00:18:37 2017 -0500
+| | 
+| |     Test 4
+| |   
+* | commit afee8e53e415859ebca406abb93eebff9a114ca5
+| | Author: Arda Pekis <github@ardapekis.com>
+| | Date:   Thu Mar 2 00:16:28 2017 -0500
+| | 
+| |     Test 3
+| |   
+* | commit 40ec1cae52fd413900c97b36d43a24b2aa4a3007
+| | Author: Arda Pekis <github@ardapekis.com>
+| | Date:   Thu Mar 2 00:14:41 2017 -0500
+| | 
+| |     Test 2
+| |   
+* | commit 48144560d1a311229c064c6559616449bb8ea541
+| | Author: Arda Pekis <github@ardapekis.com>
+| | Date:   Thu Mar 2 00:13:25 2017 -0500
+| | 
+| |     Hook test
+| |   
+* | commit 87953cb4e8c74acd5427c8a3ac0f561967c3f116
+| | Author: Arda Pekis <github@ardapekis.com>
+| | Date:   Wed Mar 1 17:58:31 2017 -0500
+| | 
+| |     Fixes the bullet collision problem!
+| |     
+| |     Also adds a debug mode for disabling the database. Makes localhost testing
+| |     infinitely easier. Turns out I made a single character error in the new
+| |     Vector class. If only x didn't look so similar to y...
+| |     
+* |   commit 07e48a742d067f105967d16379c5ba939e8eac29
+|\ \  Merge: efcfb21 2390d49
+| | | Author: Arda Pekis <github@ardapekis.com>
+| | | Date:   Wed Mar 1 17:48:20 2017 -0500
+| | | 
+| | |     Merge branch 'dev' of https://github.com/Necropuppy/WebGame into dev
+| | |      
+| * |   commit 2390d49c88fead1dbcc5befaf574ab14766429d7
+| |\ \  Merge: 1ac1d01 ce07783
+| | | | Author: Arda Pekis <github@ardapekis.com>
+| | | | Date:   Wed Mar 1 20:19:34 2017 +0000
+| | | | 
+| | | |     Keep production server address
+| | | |     
+| | * | commit ce07783e8131155cb9085625f3385f6ddbcb14dc
+| | | | Author: Nathan Foote <nfoote.alt@gmail.com>
+| | | | Date:   Wed Mar 1 13:26:37 2017 -0500
+| | | | 
+| | | |     socket statement update
+| | | |     
+| * | | commit 1ac1d01663aed468a2b478f89ab57a90d98c716b
+| |/ /  Author: Arda Pekis <github@ardapekis.com>
+| | |   Date:   Wed Mar 1 20:18:11 2017 +0000
+| | |   
+| | |       Fixed socket.io missing
+| | |    
+| * | commit 0e32790f1207d0b673877014ed68091b4b89a0a6
+| | | Author: Arda Pekis <github@ardapekis.com>
+| | | Date:   Tue Feb 28 20:46:57 2017 +0000
+| | | 
+| | |     Stuff
+| | |    
+* | | commit efcfb21cfe12463b6d3e20ee33727160a735ac09
+|/ /  Author: Arda Pekis <github@ardapekis.com>
+| |   Date:   Wed Mar 1 17:48:14 2017 -0500
+| |   
+| |       Fix respawn function
+| |   
+* | commit 922689b2f79942efe6a50ea384e41603a23a8364
+| | Author: Arda Pekis <github@ardapekis.com>
+| | Date:   Tue Feb 28 15:16:51 2017 -0500
+| | 
+| |     X
+| |   
+* | commit 6176945c81786222cf73e9de118386547b08996e
+| | Author: Arda Pekis <github@ardapekis.com>
+| | Date:   Tue Feb 28 14:53:09 2017 -0500
+| | 
+| |     More fix
+| |   
+* | commit 6561bab3ebbc14b5405135d4518309c593a67696
+| | Author: Arda Pekis <github@ardapekis.com>
+| | Date:   Tue Feb 28 14:49:43 2017 -0500
+| | 
+| |     Polar vector fix
+| |   
+* | commit 4173a5c235d7d8ae527dcd263b1bd24ceb466d30
+| | Author: Arda Pekis <ardapekis@users.noreply.github.com>
+| | Date:   Tue Feb 28 14:44:07 2017 -0500
+| | 
+| |     Test
+| |   
+* | commit 60565d7768ff1ab7fb84a5a7289adcebb63519ca
+| | Author: Arda Pekis <ardapekis@users.noreply.github.com>
+| | Date:   Tue Feb 28 14:43:05 2017 -0500
+| | 
+| |     Test
+| |   
+* | commit 1cfb3736c62afd5dd6a3a0240982944f2b006e51
+| | Author: Arda Pekis <ardapekis@users.noreply.github.com>
+| | Date:   Tue Feb 28 14:41:38 2017 -0500
+| | 
+| |     Test
+| |     
+* |   commit 48b1cb6c3a6aa015509340d7d395e10dfb532314
+|\ \  Merge: 5f24338 eec961e
+| | | Author: Arda Pekis <github@ardapekis.com>
+| | | Date:   Tue Feb 28 19:37:57 2017 +0000
+| | | 
+| | |     Merge branch 'dev' of github.com:Necropuppy/WebGame into dev
+| | |    
+| * | commit eec961e5dfc3ae01976561cfa2eedae26d5b71a0
+| | | Author: Arda Pekis <ardapekis@users.noreply.github.com>
+| | | Date:   Tue Feb 28 13:58:08 2017 -0500
+| | | 
+| | |     Test
+| | |    
+| * | commit 4295c1602664f4740dee3f004749654fee595d49
+| | | Author: Arda Pekis <ardapekis@users.noreply.github.com>
+| | | Date:   Tue Feb 28 13:55:41 2017 -0500
+| | | 
+| | |     Test
+| | |    
+| * | commit 8ca6ab6091342b79f34a0379e091e6c9e6f8c27e
+| | | Author: Arda Pekis <ardapekis@users.noreply.github.com>
+| | | Date:   Tue Feb 28 13:53:30 2017 -0500
+| | | 
+| | |     Test
+| | |    
+| * | commit db45108703a0910903f5c4b7efbf9f9b745ca898
+| | | Author: Arda Pekis <ardapekis@users.noreply.github.com>
+| | | Date:   Tue Feb 28 13:51:45 2017 -0500
+| | | 
+| | |     Test
+| | |    
+* | | commit 5f243380582491b3da0fd8adb1f1ce5cbe18eed4
+|/ /  Author: Arda Pekis <github@ardapekis.com>
+| |   Date:   Tue Feb 28 19:37:49 2017 +0000
+| |   
+| |       Fix vectors
+| |   
+* | commit 44eb8206909b008e5d6af8e85d1623e338439538
+| | Author: Arda Pekis <github@ardapekis.com>
+| | Date:   Tue Feb 28 13:49:33 2017 -0500
+| | 
+| |     Map preprocesser needs some more work
+| |     
+* |   commit 6712c8a51d770d7e2e04f31166ef6af884075047
+|\ \  Merge: d463337 c24197f
+| | | Author: Arda Pekis <github@ardapekis.com>
+| | | Date:   Tue Feb 28 13:26:23 2017 -0500
+| | | 
+| | |     Merge branch 'dev' of https://github.com/Necropuppy/WebGame into dev
+| | |    
+| * | commit c24197f69752cafa1709fd2b18f54aa7e0cd9d0f
+| | | Author: Arda Pekis <ardapekis@users.noreply.github.com>
+| | | Date:   Tue Feb 28 13:24:04 2017 -0500
+| | | 
+| | |     Update README.md
+| | |    
+* | | commit d4633378c507c7dd6a4de3de47d51d278175462f
+|/ /  Author: Arda Pekis <github@ardapekis.com>
+| |   Date:   Tue Feb 28 13:26:15 2017 -0500
+| |   
+| |       More typos. Damn java conventions.
+| |   
+* | commit 4ba461de9b76f149431f4ff7b855ed5581cdff5f
+| | Author: Arda Pekis <github@ardapekis.com>
+| | Date:   Tue Feb 28 13:22:17 2017 -0500
+| | 
+| |     Fix typo
+| |   
+* | commit 267b504b63135edc3733dea6b117f44fce15dda3
+| | Author: Arda Pekis <github@ardapekis.com>
+| | Date:   Tue Feb 28 13:18:20 2017 -0500
+| | 
+| |     Factor fps
+| |   
+* | commit beea22a26df9a9dfa3538098cfa27dfd23def22f
+| | Author: Arda Pekis <github@ardapekis.com>
+| | Date:   Mon Feb 27 15:00:18 2017 -0500
+| | 
+| |     Map processing utility
+| |   
+* | commit 0ac20f31d84cb1c8586a398e068b967475908b11
+| | Author: Arda Pekis <github@ardapekis.com>
+| | Date:   Mon Feb 27 10:45:13 2017 -0500
+| | 
+| |     Move respawn code to player entity.
+| |   
+* | commit 70202a9e85da248dfdde9e08c56ccc4dbb422e2b
+| | Author: Arda Pekis <github@ardapekis.com>
+| | Date:   Sat Feb 25 21:00:25 2017 -0500
+| | 
+| |     Second try
+| |   
+* | commit b36ac5f7bdf9b6f185481e585dfd59380767f837
+| | Author: Arda Pekis <github@ardapekis.com>
+| | Date:   Sat Feb 25 20:47:18 2017 -0500
+| | 
+| |     Add map loader
+| |     
+* |   commit 5b954881d664b5f151032538098c19805fe0cc50
+|\ \  Merge: 5a53c92 90a9d09
+| | | Author: Arda Pekis <github@ardapekis.com>
+| | | Date:   Sat Feb 25 20:08:15 2017 -0500
+| | | 
+| | |     Merge branch 'dev' of https://github.com/Necropuppy/WebGame into dev
+| | |     
+| | |     ,
+| | |    
+| * | commit 90a9d0973a8ff115ac30c04d9c3329770afb99e5
+| | | Author: Nathan Foote <nfoote.alt@gmail.com>
+| | | Date:   Sat Feb 25 20:06:39 2017 -0500
+| | | 
+| | |     add simple map
+| | |    
+* | | commit 5a53c92ddd4cfa9783b6fddc28b1e3d76923fd08
+|/ /  Author: Arda Pekis <github@ardapekis.com>
+| |   Date:   Sat Feb 25 17:58:43 2017 -0500
+| |   
+| |       Start the Map class
+| |   
+* | commit 4a7620a27e438fe5b10970b7697c088705646b7a
+| | Author: Arda Pekis <github@ardapekis.com>
+| | Date:   Sat Feb 25 17:53:28 2017 -0500
+| | 
+| |     Refactor Vector2
+| |     
+* |   commit 23d22f5f2dd7c917ed0a2d47c732e6bc6d73dd11
+|\ \  Merge: 73ab8ab 8cd05bd
+| | | Author: Arda Pekis <github@ardapekis.com>
+| | | Date:   Sat Feb 25 15:33:18 2017 -0500
+| | | 
+| | |     Resolve merge conflicts
+| | |    
+| * | commit 8cd05bd8444a0b83f9c4b5f748b54f2d893fe7e8
+| | | Author: Nathan Foote <nfoote.alt@gmail.com>
+| | | Date:   Sat Feb 25 15:14:47 2017 -0500
+| | | 
+| | |     factory entity into separate file
+| | |    
+* | | commit 73ab8ab21624011aec3c7762412c898297d0d775
+|/ /  Author: Arda Pekis <github@ardapekis.com>
+| |   Date:   Sat Feb 25 15:25:51 2017 -0500
+| |   
+| |       Add comments
+| |     
+* |   commit dafce22e8004a96314dcf42a9b95d799c419af18
+|\ \  Merge: 18dc89a 06da6f8
+| |/  Author: Arda Pekis <ardapekis@users.noreply.github.com>
+| |   Date:   Fri Feb 24 20:10:20 2017 -0500
+| |   
+| |       Merge pull request #4 from Necropuppy/master
+| |       
+| |       Pull the fixes
+| |   
+| * commit 06da6f887148c0f789411b140bd2da24c5e753bb (master)
+| | Author: Arda Pekis <github@ardapekis.com>
+| | Date:   Sat Feb 25 01:09:04 2017 +0000
+| | 
+| |     Whoo, that was a close one
+| |     
+| *   commit f6e0e2591ca4bfebced5a198fd446e2dd46a5c2f
+| |\  Merge: be4fc87 18dc89a
+| |/  Author: Arda Pekis <ardapekis@users.noreply.github.com>
+|/|   Date:   Fri Feb 24 15:45:34 2017 -0500
+| |   
+| |       Merge pull request #3 from Necropuppy/dev
+| |       
+| |       Actually works now
+| |   
+* | commit 18dc89a36fd9925314dc83e748e09abdcd6a12ca
+| | Author: Arda Pekis <github@ardapekis.com>
+| | Date:   Fri Feb 24 20:45:01 2017 +0000
+| | 
+| |     Actually works now
+| |     
+| *   commit be4fc8708388f65e7b042ec140f89d687dd28c3d
+| |\  Merge: d19d5de 9985c3c
+| |/  Author: Arda Pekis <ardapekis@users.noreply.github.com>
+|/|   Date:   Fri Feb 24 15:31:07 2017 -0500
+| |   
+| |       Merge pull request #2 from Necropuppy/dev
+| |       
+| |       Dev
+| |     
+* |   commit 9985c3c79caf5abcc97a364ac6713240c6f0a7e3
+|\ \  Merge: d1de25b 2d42254
+| | | Author: Arda Pekis <github@ardapekis.com>
+| | | Date:   Fri Feb 24 20:29:54 2017 +0000
+| | | 
+| | |     Merge branch 'dev' of github.com:Necropuppy/WebGame into dev
+| | |    
+* | | commit d1de25b169bc63c991a48780334dac605a319fcf
+| | | Author: Arda Pekis <github@ardapekis.com>
+| | | Date:   Fri Feb 24 20:29:35 2017 +0000
+| | | 
+| | |     Fix Stupid Syntax Error
+| | |      
+| | *   commit d19d5de028a4826fd59325643951a6278c572706
+| | |\  Merge: 8a031a8 2d42254
+| | |/  Author: Arda Pekis <ardapekis@users.noreply.github.com>
+| |/|   Date:   Fri Feb 24 15:25:16 2017 -0500
+| | |   
+| | |       Merge pull request #1 from Necropuppy/dev
+| | |       
+| | |       Add port configuration
+| | |      
+| * |   commit 2d422541f0aec937ccc23b99c964355c242a2bbe
+| |\ \  Merge: 45ce147 8a031a8
+|/ / /  Author: Arda Pekis <ardapekis@users.noreply.github.com>
+| | _   Date:   Fri Feb 24 15:25:10 2017 -0500
+| |     
+| |         Merge branch 'master' into dev
+| |     
+| *   commit 8a031a889d584617b23788e0be7838e3d951b949
+| |\  Merge: 0f843a5 643f0df
+| | | Author: Nathan Foote <nfoote.alt@gmail.com>
+| | | Date:   Fri Feb 24 13:42:13 2017 -0500
+| | | 
+| | |     Merge branch 'dev'
+| | |      
+| * |   commit 0f843a5563f07cdacda9d5950e022e1a86d320a0
+| |\ \  Merge: 1887dde ee805d6
+| | | | Author: Nathan Foote <nfoote.alt@gmail.com>
+| | | | Date:   Fri Feb 24 01:08:11 2017 -0500
+| | | | 
+| | | |     Merge branch 'dev'
+| | | |       
+| * | |   commit 1887dde0f369e2c054e9a9698f00a913d1a94d06
+| |\ \ \  Merge: bb0da75 2da022d
+| | | | | Author: Nathan Foote <nfoote.alt@gmail.com>
+| | | | | Date:   Thu Feb 23 19:22:23 2017 -0500
+| | | | | 
+| | | | |     Merge branch 'dev'
+| | | | |        
+| * | | |   commit bb0da75d07ca810b5be14d10480a262822ffed85
+| |\ \ \ \  Merge: a0a9667 59c99b2
+| | | | | | Author: Nathan Foote <nfoote.alt@gmail.com>
+| | | | | | Date:   Thu Feb 23 16:34:46 2017 -0500
+| | | | | | 
+| | | | | |     Merge branch 'dev'
+| | | | | |         
+| * | | | |   commit a0a96676ad446ff1ca117faa64b3893a16c154d1
+| |\ \ \ \ \  Merge: b59ebf3 9956239
+| | | | | | | Author: Nathan Foote <nfoote.alt@gmail.com>
+| | | | | | | Date:   Thu Feb 23 14:28:13 2017 -0500
+| | | | | | | 
+| | | | | | |     Merge branch 'dev'
+| | | | | | |        
+| * | | | | | commit b59ebf395247a5731eba9c5a95bfe4df11b99a5d
+| | | | | | | Author: Arda Pekis <ardapekis@users.noreply.github.com>
+| | | | | | | Date:   Thu Feb 23 14:13:08 2017 -0500
+| | | | | | | 
+| | | | | | |     Testing the auto-pull system.
+| | | | | | |          
+| * | | | | |   commit d8a602495b3edb23dc444a6a2c319c2fb0419a89
+| |\ \ \ \ \ \  Merge: 0c57d68 67660d0
+| | | | | | | | Author: Arda Pekis <github@ardapekis.com>
+| | | | | | | | Date:   Thu Feb 23 18:11:25 2017 +0000
+| | | | | | | | 
+| | | | | | | |     Merge branch 'master' of github.com:Necropuppy/WebGame
+| | | | | | | |     Merge external changes with server specific changes.
+| | | | | | | |         
+| * | | | | | | commit 0c57d68f8ec860d7f11a381186d3c1b3afb5b5cc
+| | | | | | | | Author: Arda Pekis <github@ardapekis.com>
+| | | | | | | | Date:   Thu Feb 23 18:11:23 2017 +0000
+| | | | | | | | 
+| | | | | | | |     Server specific changes
+| | | | | | | |         
+* | | | | | | | commit 45ce14795b8fe6e28e2c2220f1802776d1405409
+| |_|_|_|_|_|/  Author: Arda Pekis <github@ardapekis.com>
+|/| | | | | |   Date:   Fri Feb 24 20:22:21 2017 +0000
+| | | | | | |   
+| | | | | | |       Add port configuration
+| | | | | | |        
+* | | | | | | commit 643f0dfee51b21b23a9357a32b8f499a89656756
+| |_|_|_|_|/  Author: Nathan Foote <nfoote.alt@gmail.com>
+|/| | | | |   Date:   Fri Feb 24 13:41:47 2017 -0500
+| | | | | |   
+| | | | | |       register button
+| | | | | |       
+* | | | | | commit ee805d670bfec9e86b6e2cef4854fd3d6ea06f8a
+| |_|_|_|/  Author: Nathan Foote <nfoote.alt@gmail.com>
+|/| | | |   Date:   Fri Feb 24 01:07:35 2017 -0500
+| | | | |   
+| | | | |       added chat username and login error handling
+| | | | |      
+* | | | | commit 2da022ded2b586284dfeee99e7d6e764f55bd4ab
+| |_|_|/  Author: Nathan Foote <nfoote.alt@gmail.com>
+|/| | |   Date:   Thu Feb 23 19:21:47 2017 -0500
+| | | |   
+| | | |       title
+| | | |     
+* | | | commit 59c99b280822fa1171a18f926ae4744199ba130a
+| |_|/  Author: Nathan Foote <nfoote.alt@gmail.com>
+|/| |   Date:   Thu Feb 23 16:34:06 2017 -0500
+| | |   
+| | |       login menu
+| | |    
+* | | commit 9956239c355efbb99a6a9cb3ab2c306021aaa635
+| |/  Author: Nathan Foote <nfoote.alt@gmail.com>
+|/|   Date:   Thu Feb 23 14:27:02 2017 -0500
+| |   
+| |       autoscrolling chat
+| |   
+* | commit 67660d05ea80622f34486f2efc6f52e4cf9a20ea
+|/  Author: Nathan Foote <nfoote.alt@gmail.com>
+|   Date:   Thu Feb 23 12:45:27 2017 -0500
+|   
+|       Add images, map, and score
+|  
+* commit 87f6762777a25fc7e89a6f4bb2b240e0757632bd
+| Author: Nathan Foote <nfoote.alt@gmail.com>
+| Date:   Wed Feb 22 23:58:27 2017 -0500
+| 
+|     Inital Commit
+|  
+* commit e0ec36ab036295dfff3355c8111befb950ebf182
+  Author: Necropuppy <nfooteaz@gmail.com>
+  Date:   Wed Feb 22 23:52:49 2017 -0500
+  
+      Initial commit

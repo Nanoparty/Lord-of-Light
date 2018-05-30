@@ -1,0 +1,1144 @@
+
+<div id="everything">
+
+
+<div id="signDiv">
+	<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+
+
+
+      <link rel="stylesheet" href="/client/css/style.css">
+
+
+</head>
+
+<body>
+  <!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Nanoriot</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+  </head>
+
+  <body class="align">
+
+
+
+    <div class="grid">
+
+		<h1>Lord of Light</h1>
+		<h3>Conflict Eternal</h3>
+
+      <form id="loginForm" class="form login">
+
+        <div class="form__field">
+          <label for="login__username"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use></svg><span class="hidden">Username</span></label>
+          <input id="signDiv-username" type="text" name="username" class="form__input" placeholder="Username" required>
+        </div>
+
+        <div class="form__field">
+          <label for="login__password"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#lock"></use></svg><span class="hidden">Password</span></label>
+          <input id="signDiv-password" type="password" name="password" class="form__input" placeholder="Password" required>
+        </div>
+
+        <div class="form__field">
+          <input id="signDiv-signIn" type="submit" value="Login">
+        </div>
+
+		<div class="form__field">
+          <input id="signDiv-signUp" type="submit" value="Register">
+        </div>
+
+      </form>
+
+
+		<div id="signupPass" style="display:none;">
+			<p id="passText" >Account Registered Successfully</p>
+	  </div>
+	  <div id="loginError" style="display:none;">
+			<p id="errorText" >Incorrect Username or Password</p>
+	  </div>
+	  <div id="signupError" style="display:none;">
+			<p id="errorText" >Username Taken</p>
+	  </div>
+
+
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" class="icons"><symbol id="arrow-right" viewBox="0 0 1792 1792"><path d="M1600 960q0 54-37 91l-651 651q-39 37-91 37-51 0-90-37l-75-75q-38-38-38-91t38-91l293-293H245q-52 0-84.5-37.5T128 1024V896q0-53 32.5-90.5T245 768h704L656 474q-38-36-38-90t38-90l75-75q38-38 90-38 53 0 91 38l651 651q37 35 37 90z"/></symbol><symbol id="lock" viewBox="0 0 1792 1792"><path d="M640 768h512V576q0-106-75-181t-181-75-181 75-75 181v192zm832 96v576q0 40-28 68t-68 28H416q-40 0-68-28t-28-68V864q0-40 28-68t68-28h32V576q0-184 132-316t316-132 316 132 132 316v192h32q40 0 68 28t28 68z"/></symbol><symbol id="user" viewBox="0 0 1792 1792"><path d="M1600 1405q0 120-73 189.5t-194 69.5H459q-121 0-194-69.5T192 1405q0-53 3.5-103.5t14-109T236 1084t43-97.5 62-81 85.5-53.5T538 832q9 0 42 21.5t74.5 48 108 48T896 971t133.5-21.5 108-48 74.5-48 42-21.5q61 0 111.5 20t85.5 53.5 62 81 43 97.5 26.5 108.5 14 109 3.5 103.5zm-320-893q0 159-112.5 271.5T896 896 624.5 783.5 512 512t112.5-271.5T896 128t271.5 112.5T1280 512z"/></symbol></svg>
+
+  </body>
+
+</html>
+
+
+</body>
+</html>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+		<div id="pickChar" style="display:none;">
+		<h1>Choose Your God</h1>
+		<div class="charDiv">
+			<img src="/client/img/sampic.png">
+			<p style="color:lightblue">Known as the False Buddha and one of the First. Sam uses Electro Direction to defeat his enemies.</p>
+			<button id="sam" onclick="selectSam()">Sam</button>
+		</div>
+		<div class="charDiv">
+			<img src="/client/img/yamapic.png">
+			<p style="color:lightblue">Yama, scientific genius, master of arms, God of Death</p>
+			<button id="yama" onclick="selectYama()">Yama</button>
+		</div>
+		<div class="charDiv">
+			<img src="/client/img/agnipic.png">
+			<p style="color:lightblue">Agni, God of Fire, can scortch the moons with his wand of Universal Fire</p>
+			<button id="sam" onclick="selectAgni()">Agni</button>
+		</div>
+		<div class="charDiv">
+			<img src="/client/img/shiva.png">
+			<p style="color:lightblue">Shiva, one of the Trimurti, wield a trident of deatomization</p>
+			<button id="sam" onclick="selectShiva()">Shiva</button>
+		</div>
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+
+
+
+	<div id="gameDiv" style="display:none;">
+		<audio controls  autoplay style="display:none">
+			<source src= "/client/img/music.mp3" type ="audio/mpeg">
+		</audio>
+		<canvas id="ctx"  width ="1920" height="950" style="border:1px solid #000000;"></canvas>
+
+
+	</div>
+
+
+</body>
+</div>
+
+<script src="http://ec2-54-87-252-241.compute-1.amazonaws.com:8080/socket.io/socket.io.js"></script>
+<script>
+
+	var socket = io();
+
+	//sign
+	var signDiv = document.getElementById('signDiv');
+	var signDivUsername = document.getElementById('signDiv-username');
+	var signDivSignIn = document.getElementById('signDiv-signIn');
+	var signDivSignUp = document.getElementById('signDiv-signUp');
+	var signDivPassword = document.getElementById('signDiv-password');
+
+	var loginForm = document.getElementById('loginForm');
+
+	var loginError = document.getElementById('loginError');
+	var signupError = document.getElementById('signupError');
+	var signupPass = document.getElementById('signupPass');
+
+	var charDiv = document.getElementById('pickChar');
+	var samBt = document.getElementById('sam');
+	var yamaBt = document.getElementById('yama');
+
+	loginForm.onsubmit = function(e){
+		e.preventDefault();
+		socket.emit('signIn',{username:signDivUsername.value,password:signDivPassword.value});
+	}
+	signDivSignUp.onclick = function(){
+		socket.emit('signUp',{username:signDivUsername.value,password:signDivPassword.value});
+	}
+	socket.on('signInResponse',function(data){
+		if(data.success){
+			//alert("Sign up successul.");
+			signDiv.style.display = 'none';
+			charDiv.style.display = 'inline-block';
+		} else
+			//alert("Sign in unsuccessul.");
+			signupError.style.display = 'none';
+			signupPass.style.display = 'none';
+			loginError.style.display = 'inline';
+	});
+	socket.on('signUpResponse',function(data){
+		if(data.success){
+
+
+			signupError.style.display = 'none';
+			loginError.style.display = 'none';
+			signupPass.style.display = 'inline';
+
+
+		} else {
+			//alert("Sign up unsuccessul.");
+			signupPass.style.display = 'none';
+			loginError.style.display = 'none';
+			signupError.style.display = 'inline';
+		}
+	});
+
+	//character selection
+
+	var selectYama = function(){
+		socket.emit('charSelect',{hero:"yama"});
+		charDiv.style.display = 'none';
+		gameDiv.style.display = 'inline-block';
+	}
+
+	var selectSam = function(){
+		socket.emit('charSelect',{hero:"sam"});
+		charDiv.style.display = 'none';
+		gameDiv.style.display = 'inline-block';
+	}
+	var selectShiva = function(){
+		socket.emit('charSelect',{hero:"shiva"});
+		charDiv.style.display = 'none';
+		gameDiv.style.display = 'inline-block';
+	}
+	var selectAgni = function(){
+		socket.emit('charSelect',{hero:"agni"});
+		charDiv.style.display = 'none';
+		gameDiv.style.display = 'inline-block';
+	}
+
+
+
+	//game
+	var Img = {};
+	Img.pu = new Image();
+	Img.pu.src = '/client/img/su.png';
+	Img.pd = new Image();
+	Img.pd.src = '/client/img/sd.png';
+	Img.pl = new Image();
+	Img.pl.src = '/client/img/sl.png';
+	Img.pr = new Image();
+	Img.pr.src = '/client/img/sr.png';
+
+	Img.gu = new Image();
+	Img.gu.src = '/client/img/yu.png';
+	Img.gd = new Image();
+	Img.gd.src = '/client/img/yd.png';
+	Img.gl = new Image();
+	Img.gl.src = '/client/img/yl.png';
+	Img.gr = new Image();
+	Img.gr.src = '/client/img/yr.png';
+
+	Img.shu = new Image();
+	Img.shu.src = '/client/img/shu.png';
+	Img.shd = new Image();
+	Img.shd.src = '/client/img/shd.png';
+	Img.shl = new Image();
+	Img.shl.src = '/client/img/shl.png';
+	Img.shr = new Image();
+	Img.shr.src = '/client/img/srr.png';
+
+	Img.au = new Image();
+	Img.au.src = '/client/img/au.png';
+	Img.ad = new Image();
+	Img.ad.src = '/client/img/agnid.png';
+	Img.al = new Image();
+	Img.al.src = '/client/img/al.png';
+	Img.ar = new Image();
+	Img.ar.src = '/client/img/ar.png';
+
+	Img.bluerak = new Image();
+	Img.bluerak.src = '/client/img/bluerak.png';
+
+	Img.bluemhp = new Image();
+	Img.bluemhp.src = '/client/img/bluemhp.png';
+	Img.redmhp = new Image();
+	Img.redmhp.src = 'client/img/redmhp.png';
+
+
+
+	Img.hp = new Image();
+	Img.hp.src = '/client/img/hp.png';
+
+	Img.rak = new Image();
+	Img.rak.src = '/client/img/rak.png';
+
+	Img.blue = new Image();
+	Img.yellow = new Image();
+	Img.red = new Image();
+	Img.black = new Image();
+
+	Img.blue.src = '/client/img/bluebar.png';
+	Img.yellow.src = '/client/img/yellowbar.png';
+	Img.red.src = '/client/img/redbar.png';
+	Img.black.src = '/client/img/blackbar.png';
+
+	Img.bottom = new Image();
+	Img.bottom.src = '/client/img/bottom.png';
+	Img.bottomtop = new Image();
+	Img.bottomtop.src = '/client/img/bottom-top.png';
+
+
+	Img.tower = new Image();
+	Img.tower.src = '/client/img/tower.png';
+
+	Img.rtower = new Image();
+	Img.btower = new Image();
+	Img.btower.src = '/client/img/bluetower.png';
+	Img.rtower.src = '/client/img/redtower.png';
+
+	Img.rtowerruin = new Image();
+	Img.btowerruin = new Image()
+	Img.rtowerruin.src = '/client/img/redtowerruin.png';
+	Img.btowerruin.src = '/client/img/bluetowerruin.png';
+
+	Img.bullet = new Image();
+	Img.bullet.src = '/client/img/bullet.png';
+	Img.bulletFire = new Image();
+	Img.bulletFire.src = '/client/img/fireBall.png';
+	Img.bulletDeath = new Image();
+	Img.bulletDeath.src = '/client/img/deathBall.png';
+	Img.bulletLightning = new Image();
+	Img.bulletLightning.src= '/client/img/lightningBall.png';
+	Img.map = new Image();
+	Img.map.src = '/client/img/mapProgress.png';
+
+	Img.realMap = new Image();
+	Img.realMap.src = "/client/img/mapProgress.png";
+
+	Img.rakshasa = new Image();
+	Img.rakshasa.src = '/client/img/rakshasa.png';
+
+	Img.base = new Image();
+	Img.base.src = '/client/img/prayerMachine.png';
+
+	Img.samPic = new Image();
+	Img.samPic.src = "/client/img/sampic.png";
+
+	Img.victory = new Image();
+	Img.victory.src = '/client/img/victory.png';
+	Img.defeat = new Image();
+	Img.defeat.src = '/client/img/defeat.png';
+
+	Img.stiny = new Image();
+	Img.atiny = new Image();
+	Img.ytiny = new Image();
+	Img.shtiny = new Image();
+
+	Img.stiny.src = '/client/img/samtiny.png';
+	Img.atiny.src = '/client/img/agnitiny.png';
+	Img.shtiny.src = '/client/img/shivatiny.png';
+	Img.ytiny.src = '/client/img/yamatiny.png';
+
+	Img.accel = new Image();
+	Img.accel.src = '/client/img/Accelerationists.png';
+	Img.deity = new Image();
+	Img.deity.src = '/client/img/Deitists.png';
+	Img.respawn = new Image();
+	Img.respawn.src = '/client/img/summon.png';
+
+	Img.bluebase = new Image();
+	Img.bluebase.src = '/client/img/blueBase.png';
+	Img.redbase = new Image();
+	Img.redbase.src = 'client/img/redBase.png';
+
+	var gameOver = false;
+	var winner = -1;
+
+	var ctx = document.getElementById("ctx").getContext("2d");
+	ctx.font = '30px Arial';
+	ctx.imageSmoothingEnabled = false;
+
+	var WIDTH = 1920;
+	var HEIGHT = 950;
+
+	var Map = function(initPack){
+		var self = {};
+		self.id = initPack.id;
+		self.rows = initPack.rows;
+		self.cols = initPack.cols;
+		self.tiles = initPack.tiles;
+
+		self.draw = function(){
+			var x = WIDTH/2 - Player.list[selfId].x;
+			var y = HEIGHT/2 - Player.list[selfId].y;
+			var tileWidth = 32;
+			//console.log("here we go");
+			ctx.drawImage(Img.map,x,y);
+			//console.log("did we make it?");
+
+			for(var r = 0; r < self.rows; r++){
+				for(var c = 0;c < self.cols;c++){
+					//ctx.fillStyle = self.tiles[r][c].color;
+					//console.log(self.tiles[r][c].type);
+
+					//ctx.fillRect(x + tileWidth*r , y + tileWidth*c , tileWidth,tileWidth);
+				}
+			}
+
+		}
+
+		Map.list[self.id] = self;
+
+
+		return self;
+	}
+	Map.list = {};
+
+
+	var Tower = function(initPack){
+		var self = {};
+		self.id = initPack.id;
+		self.x = initPack.x;
+		self.y = initPack.y;
+		self.isDestroyed = initPack.destroyed;
+		self.hp = initPack.hp;
+		self.target = initPack.target;
+		self.attacking = initPack.attacking;
+		self.team = initPack.team;
+		if(self.team === 0){
+			self.Img = Img.btower;
+			self.ruinImg = Img.btowerruin;
+		}
+		if(self.team === 1){
+			self.Img = Img.rtower;
+			self.ruinImg = Img.rtowerruin;
+		}
+
+
+		Tower.list[self.id] = self;
+
+		self.draw = function(){
+			//console.log(self.hp);
+
+			var x = self.x + WIDTH/2 - Player.list[selfId].x;
+			var y = self.y + HEIGHT/2 - Player.list[selfId].y;
+			var tileWidth = 32;
+
+			if (self.isDestroyed) {
+				ctx.drawImage(self.ruinImg, x , y );
+			} else {
+				ctx.drawImage(self.Img,x,y);
+			}
+
+
+
+			if(self.attacking){
+				ctx.fillStyle = 'white';
+				ctx.strokeStyle = 'red';
+				ctx.lineWidth = '8';
+				ctx.beginPath();
+				ctx.moveTo(x + 50  ,y  + 20);
+
+				ctx.lineTo(x + self.target.pos.x - self.x,y +self.target.pos.y - self.y);
+				ctx.stroke();
+			}
+			if(!self.isDestroyed){
+				var hpWidth = 90 - 9 * (self.hp / 500);
+
+			//player hp bars mini
+			ctx.fillStyle = 'red';
+			if(self.team !== Player.list[selfId].team){//enemy team
+				ctx.drawImage(Img.redmhp,x - 65 + 60,y - 60);
+			} else if(self.team === Player.list[selfId].team){//friendly team
+				ctx.drawImage(Img.bluemhp,x - 65 + 60,y - 60);
+			}
+
+			//hp
+			ctx.fillStyle = ctx.fillStyle = 'rgb(32, 74, 74)';
+			//mp grey
+			ctx.fillRect(x -65+2 + 60 + 90 - (hpWidth),y-60+3,hpWidth,4);
+
+			//top layer
+			//ctx.drawImage(Img.black,x-65,y-60);
+			}
+		}
+
+		return self;
+	}
+
+	Tower.list = {};
+
+	var Base = function(initPack){
+		var self = {};
+		self.id = initPack.id;
+		self.x = initPack.x;
+		self.y = initPack.y;
+		self.isDestroyed = initPack.destroyed;
+		self.hp = initPack.hp;
+		self.team = initPack.team;
+
+		if(self.team === 0){
+			self.Img = Img.bluebase;
+		}
+		if(self.team === 1){
+			self.Img = Img.redbase;
+		}
+
+		Base.list[self.id] = self;
+
+		self.draw = function(){
+			//console.log(self.hp);
+			//console.log(":" + self.isDestroyed);
+			var x = self.x + WIDTH/2 - Player.list[selfId].x;
+			var y = self.y + HEIGHT/2 - Player.list[selfId].y;
+			var tileWidth = 32;
+			if (self.isDestroyed){
+				ctx.drawImage(Img.pd, x, y);
+			} else {
+				ctx.drawImage(self.Img,x,y);
+
+				var hpWidth = 90 - 9 * (self.hp / 1000);
+				//player hp bars mini
+				ctx.fillStyle = 'red';
+				if(self.team !== Player.list[selfId].team){//enemy team
+					ctx.drawImage(Img.redmhp,x - 65 + 60,y - 60);
+				} else if(self.team === Player.list[selfId].team){//friendly team
+					ctx.drawImage(Img.bluemhp,x - 65 + 60,y - 60);
+				}
+
+				//hp
+				ctx.fillStyle = ctx.fillStyle = 'rgb(32, 74, 74)';
+				//mp grey
+				ctx.fillRect(x -65+2 + 60 + 90 - hpWidth,y-60+3,hpWidth,4);
+
+				//top layer
+				//ctx.drawImage(Img.black,x-65,y-60);
+			}
+
+		}
+
+		return self;
+	}
+
+	Base.list = {};
+
+
+
+	var Player = function(initPack){
+		var self = {};
+		self.id = initPack.id;
+		self.number = initPack.number;
+		self.x = initPack.x;
+		self.y = initPack.y;
+		self.hp = initPack.hp;
+		self.hpMax = initPack.hpMax;
+		self.score = initPack.score;
+		self.right = initPack.right;
+		self.left = initPack.left;
+		self.up = initPack.up;
+		self.down = initPack.down;
+		self.timerStart = initPack.timerStart;
+		self.difference = initPack.difference;
+
+		self.mp = initPack.mp;
+		self.mpMax = initPack.mpMax;
+		self.xp = initPack.xp;
+		self.xpMax = initPack.xpMax;
+		self.lvl = initPack.lvl;
+		self.lvlPts = initPack.lvlPts;
+		self.time = initPack.time;
+		self.team = initPack.team;
+		if(self.team === 0){
+			self.teamBanner = Img.accel;
+		}else if(self.team === 1){
+			self.teamBanner = Img.deity;
+		}
+		self.hero = initPack.hero;
+		self.faith = initPack.faith;
+		self.kills = initPack.kills;
+		self.deaths = initPack.deaths;
+		self.damage = initPack.damage;
+		self.speed = initPack.speed;
+		self.armor = initPack.armor;
+		if(self.hero === "sam"){
+			self.player = Img.pd;
+			self.proPic = Img.stiny;
+		}
+		if(self.hero === "yama"){
+			self.proPic = Img.ytiny;
+			self.player = Img.gd;
+		}
+		if(self.hero === "shiva"){
+			self.proPic = Img.shtiny;
+			self.player = Img.shd;
+		}
+		if(self.hero === "agni"){
+			self.proPic = Img.atiny;
+			self.player = Img.ad;
+		}
+
+		self.draw = function(){
+			console.log("x: " + self.x + ", y: " + self.y);
+			var x = self.x - Player.list[selfId].x + WIDTH/2;
+			var y = self.y - Player.list[selfId].y + HEIGHT/2;
+
+			var hpWidth = 90 - (90 * self.hp / self.hpMax);
+			var mpWidth = 90 - (90* self.mp / self.mpMax);
+
+
+			//player hp bars mini
+			ctx.fillStyle = 'red';
+			if(self.id === Player.list[selfId].id){//you
+				ctx.drawImage(Img.yellow,x - 65,y - 60);
+			}else  if(self.team !== Player.list[selfId].team){//enemy team
+				ctx.drawImage(Img.red,x - 65,y - 60);
+			} else if(self.team === Player.list[selfId].team){//friendly team
+				ctx.drawImage(Img.blue,x - 65,y - 60);
+			}
+
+
+			//hp
+			ctx.fillStyle = ctx.fillStyle = 'rgb(32, 74, 74)';
+			//hp grey
+			ctx.fillRect(x - 65 + 23 + 90 - (hpWidth),y-60+3,hpWidth,9);
+			//mp grey
+			ctx.fillRect(x - 65 + 23 + 90 - (mpWidth),y-60+15,mpWidth,4);
+
+
+			//top layer
+			ctx.drawImage(Img.black,x-65,y-60);
+			ctx.fillStyle = 'white';
+			ctx.font = '20px Arial';
+			ctx.fillText(self.lvl,x-60,y-42);
+			if(self.hero === "sam"){
+				if (self.down){
+					self.player = Img.pd;
+				} else if(self.up){
+					self.player = Img.pu;
+				} else if(self.right){
+					self.player = Img.pr;
+				} else if(self.left) {
+					self.player = Img.pl;
+				}
+			}
+			if(self.hero === "yama"){
+				if (self.down){
+					self.player = Img.gd;
+				} else if(self.up){
+					self.player = Img.gu;
+				} else if(self.right){
+					self.player = Img.gr;
+				} else if(self.left) {
+					self.player = Img.gl;
+				}
+			}
+			if(self.hero === "shiva"){
+				if (self.down){
+					self.player = Img.shd;
+				} else if(self.up){
+					self.player = Img.shu;
+				} else if(self.right){
+					self.player = Img.shr;
+				} else if(self.left) {
+					self.player = Img.shl;
+				}
+			}
+			if(self.hero === "agni"){
+				if (self.down){
+					self.player = Img.ad;
+				} else if(self.up){
+					self.player = Img.au;
+				} else if(self.right){
+					self.player = Img.ar;
+				} else if(self.left) {
+					self.player = Img.al;
+				}
+			}
+
+			var width = self.player.width*2;
+			var height = self.player.height*2;
+
+			ctx.drawImage(self.player,
+				0,0,self.player.width,self.player.height,
+				x-width/2,y-height/2,width,height);
+
+				if (Player.list[selfId] === self) {
+				//draw team banner
+				ctx.drawImage(self.teamBanner,(WIDTH -400)/2,0);
+
+
+				//player self status bar
+				var hpWidthSelf = 395 -(395 * Player.list[selfId].hp / Player.list[selfId].hpMax);
+				var mpWidthSelf = 395 -(395 * Player.list[selfId].mp / Player.list[selfId].mpMax);
+				var xpWidthSelf = 90 -(90 * Player.list[selfId].xp / Player.list[selfId].xpMax);
+
+
+				//draw UI image
+				ctx.drawImage(Img.bottom,0, HEIGHT-Img.bottom.height);
+
+				//draw profile pic
+				ctx.drawImage(self.proPic,0,HEIGHT-118);
+
+				ctx.fillStyle = 'orange';
+
+				//draw over bars
+				//hp
+				ctx.fillStyle = ctx.fillStyle = 'rgb(32, 74, 74)';
+				//hp grey
+				ctx.fillRect(738 + 395 - (hpWidthSelf),HEIGHT - 38,hpWidthSelf,16);
+				//mp grey
+				ctx.fillRect(738 + 395 - (mpWidthSelf),HEIGHT - 19,mpWidthSelf,16);
+				//xp grey
+				ctx.fillRect(3 + 90 - (xpWidthSelf),HEIGHT - 19,xpWidthSelf,16);
+
+				//draw hp text
+				ctx.fillStyle = 'black';
+				ctx.font = '15px Arial';
+				ctx.fillText("Health:" + self.hp + "/" + self.hpMax, 738 + (395/3)+25,HEIGHT - 38+15);
+				//mp
+				ctx.fillText("Mana:" + self.mp + "/" + self.mpMax, 738 + (395/3+25),HEIGHT - 38+33);
+				//karma
+				ctx.fillText("Karma:" + self.xp + "/" + self.xpMax, 6,HEIGHT - 38+33);
+
+				//black text
+				ctx.fillStyle = 'white';
+				ctx.font = '15px Arial';
+				ctx.fillText("Health:" + self.hp + "/" + self.hpMax, 739 + (395/3)+25,HEIGHT - 38+14);
+				//mp
+				ctx.fillText("Mana:" + self.mp + "/" + self.mpMax, 739 + (395/3+25),HEIGHT - 38+32);
+				//karma
+				ctx.fillText("Karma:" + self.xp + "/" + self.xpMax, 7,HEIGHT - 38+32);
+
+				//draw UI overlay
+				ctx.drawImage(Img.bottomtop,0, HEIGHT-Img.bottomtop.height);
+
+				//player stats
+				ctx.font= '12px Arial';
+				ctx.fillText("ATK:" + self.damage, 100, HEIGHT - 100);
+				//ctx.fillText("DEF:" + self.armor, 100, HEIGHT - 80);
+				ctx.fillText("SPD:" + self.speed, 100, HEIGHT - 80);
+				ctx.fillText("KILLS:" + self.kills, 100, HEIGHT - 60);
+				ctx.fillText("DTHS:" + self.deaths, 100, HEIGHT - 40);
+				ctx.fillText("FAITH:" + self.faith, 100, HEIGHT - 20);
+
+
+				ctx.fillStyle = 'black';
+				ctx.fillRect(71,HEIGHT-47,25,25);
+				ctx.fillStyle = 'yellow';
+				ctx.font = '30px Arial';
+				ctx.fillText(Player.list[selfId].lvl,75,HEIGHT-20);
+
+				//draw minimap icons
+				for(var i in Player.list){
+					if(Player.list[i].id === Player.list[selfId].id){
+						ctx.fillStyle = 'yellow';
+						ctx.fillRect(1745 + (Player.list[i].x/9600)*175, HEIGHT - 175 + (Player.list[i].y/9600)*175,5,5);
+					}
+					else if(Player.list[i].team === Player.list[selfId].team){
+						ctx.fillStyle = 'blue';
+						ctx.fillRect(1745 + (Player.list[i].x/9600)*175, HEIGHT - 175 + (Player.list[i].y/9600)*175,5,5);
+					}
+					else{
+						ctx.fillStyle = 'red';
+						ctx.fillRect(1745 + (Player.list[i].x/9600)*175, HEIGHT - 175 + (Player.list[i].y/9600)*175,5,5);
+					}
+				}
+
+				if(self.timerStart){
+					ctx.drawImage(Img.respawn,750,450);
+					ctx.fillStyle = 'white';
+					ctx.font='30px Arial';
+					ctx.fillText(Math.ceil(10 - self.difference),750+270+50,450+30);
+				}
+			}
+
+		}
+		self.drawEnd = function(){
+
+			if(winner === self.team){
+				ctx.drawImage(Img.defeat,0,0);
+
+
+			}else if(winner !== -1){
+				ctx.drawImage(Img.victory,0,0);
+
+			}
+
+			if(winner === 1){
+				ctx.drawImage(Img.accel,0,Img.victory.height);
+			}else if(winner === 0){
+				ctx.drawImage(Img.deity,0,Img.victory.height);
+			}
+
+		}
+
+		Player.list[self.id] = self;
+
+
+		return self;
+	}
+	Player.list = {};
+
+
+	var Bullet = function(initPack){
+		var self = {};
+		self.id = initPack.id;
+		self.x = initPack.x;
+		self.y = initPack.y;
+		self.hero = initPack.hero;
+
+		self.draw = function(){
+			var width = Img.bullet.width/2;
+			var height = Img.bullet.height/2;
+
+			var x = self.x - Player.list[selfId].x + WIDTH/2;
+			var y = self.y - Player.list[selfId].y + HEIGHT/2;
+
+			if (self.hero == "sam") {
+				ctx.drawImage(Img.bulletLightning,
+					0,0,Img.bulletLightning.width,Img.bulletLightning.height,
+					x-width/2,y-height/2,width,height);
+			} else if (self.hero == "yama") {
+				ctx.drawImage(Img.bulletDeath,
+					0,0,Img.bulletDeath.width,Img.bulletDeath.height,
+					x-width/2,y-height/2,width,height);
+			} else if (self.hero == "agni") {
+				ctx.drawImage(Img.bulletFire,
+					0,0,Img.bulletFire.width,Img.bulletFire.height,
+					x-width/2,y-height/2,width,height);
+			} else {
+				ctx.drawImage(Img.bullet,
+					0,0,Img.bullet.width,Img.bullet.height,
+					x-width/2,y-height/2,width,height);
+			}
+
+		}
+
+		Bullet.list[self.id] = self;
+		return self;
+	}
+	Bullet.list = {};
+
+	var Minion = function(initPack) {
+		var self = {};
+		self.id = initPack.id;
+		self.x = initPack.x;
+		self.y = initPack.y;
+		self.hp = initPack.hp;
+		self.team = initPack.team;
+		if(self.team === 0){
+			self.img = Img.bluerak;
+		} else if(self.team === 1){
+			self.img = Img.rak;
+		}
+
+		self.draw = function() {
+			var width = Img.rakshasa.width/2;
+			var height = Img.rakshasa.height/2;
+
+			var x = self.x - Player.list[selfId].x + WIDTH/2;
+			var y = self.y - Player.list[selfId].y + HEIGHT/2;
+
+			ctx.drawImage(self.img,
+				0,0,Img.rakshasa.width,Img.rakshasa.height + 40,
+				x-width/2,y-height/2,width,height);
+
+			var hpWidth = 90 - 9 * (self.hp / 100);
+
+			//player hp bars mini
+			ctx.fillStyle = 'red';
+			if(self.team !== Player.list[selfId].team){//enemy team
+				ctx.drawImage(Img.redmhp,x - 65 + 25,y - 60);
+			} else if(self.team === Player.list[selfId].team){//friendly team
+				ctx.drawImage(Img.bluemhp,x - 65 + 25,y - 60);
+			}
+
+			//hp
+			ctx.fillStyle = ctx.fillStyle = 'rgb(32, 74, 74)';
+			//mp grey
+			ctx.fillRect(x - 65 + 2 + 25 + 90 - hpWidth,y-60+3,hpWidth,4);
+
+			//top layer
+			//ctx.drawImage(Img.black,x-65,y-60);
+		}
+
+		Minion.list[self.id] = self;
+		return self;
+	}
+	Minion.list = {};
+
+	var selfId = null;
+
+	socket.on('init',function(data){
+		if(data.selfId)
+			selfId = data.selfId;
+		for(var i = 0 ; i < data.player.length; i++){
+			new Player(data.player[i]);
+		}
+		for(var i = 0 ; i < data.bullet.length; i++){
+			new Bullet(data.bullet[i]);
+		}
+		for(var i = 0 ; i < data.tower.length; i++){
+			new Tower(data.tower[i]);
+		}
+		for(var i = 0 ; i < data.base.length; i++){
+			new Base(data.base[i]);
+		}
+		for(var i = 0; i < data.minion.length; i++) {
+			new Minion(data.minion[i]);
+		}
+
+	});
+
+	socket.on('update',function(data){
+		if(!data.end){
+			for(var i = 0 ; i < data.player.length; i++){
+				var pack = data.player[i];
+				var p = Player.list[pack.id];
+				if(p){
+					if(pack.x !== undefined)
+						p.x = pack.x;
+					if(pack.y !== undefined)
+						p.y = pack.y;
+					if(pack.hp !== undefined)
+						p.hp = pack.hp;
+					if(pack.mp !== undefined)
+						p.mp = pack.mp;
+					if(pack.xp !== undefined)
+						p.xp = pack.xp;
+					if(pack.lvl !== undefined)
+						p.lvl = pack.lvl;
+					if(pack.lvlPts !== undefined)
+						p.lvlPts = pack.lvlPts;
+					if(pack.score !== undefined)
+						p.score = pack.score;
+					if(pack.armor !== undefined)
+						p.armor = pack.armor;
+					if(pack.speed !== undefined)
+						p.speed = pack.speed;
+					if(pack.damage !== undefined)
+						p.damage = pack.damage;
+					if(pack.kills !== undefined)
+						p.kills = pack.kills;
+					if(pack.deaths !== undefined)
+						p.deaths = pack.deaths;
+					if(pack.faith !== undefined)
+						p.faith = pack.faith;
+					p.right = pack.right;
+					p.left = pack.left;
+					p.up = pack.up;
+					p.down = pack.down;
+					p.time = pack.time;
+					if(pack.timerStart !== undefined)
+						p.timerStart = pack.timerStart;
+
+					p.difference = pack.difference;
+				}
+			}
+			for(var i = 0; i < data.minion.length; i++) {
+				var pack = data.minion[i];
+				var m = Minion.list[pack.id];
+				if (m){
+					if(pack.x !== undefined) {
+						m.x = pack.x;
+					}
+					if(pack.y !== undefined) {
+						m.y = pack.y;
+					}
+					if(pack.hp !== undefined) {
+						m.hp = pack.hp;
+					}
+				}
+			}
+			for(var i = 0 ; i < data.bullet.length; i++){
+				var pack = data.bullet[i];
+				var b = Bullet.list[data.bullet[i].id];
+				if(b){
+					if(pack.x !== undefined)
+						b.x = pack.x;
+					if(pack.y !== undefined)
+						b.y = pack.y;
+				}
+			}
+
+			for(var i = 0 ; i < data.tower.length; i++){
+				var pack = data.tower[i];
+				var b = Tower.list[data.tower[i].id];
+				if(b){
+					if(pack.hp !== undefined)
+						b.hp = pack.hp;
+
+						b.isDestroyed = pack.destroyed;
+
+						b.attacking = pack.attacking;
+
+						b.target = pack.target;
+
+
+
+				}
+			}
+
+			for(var i = 0 ; i < data.base.length; i++){
+				var pack = data.base[i];
+				var b = Base.list[data.base[i].id];
+				if(b){
+					if(pack.hp !== undefined)
+						b.hp = pack.hp;
+
+						b.isDestroyed = pack.destroyed;
+
+						//b.attacking = pack.attacking;
+
+						//b.target = pack.target;
+
+				}
+			}
+		}else{
+			winner = data.victory;
+			gameOver = data.end;
+		}
+
+	});
+
+	socket.on('remove',function(data){
+		//{player:[12323],bullet:[12323,123123]}
+		for(var i = 0 ; i < data.player.length; i++){
+
+
+			delete Player.list[data.player[i]];
+		}
+		for(var i = 0 ; i < data.bullet.length; i++){
+			delete Bullet.list[data.bullet[i]];
+		}
+		for(var i = 0; i < data.minion.length; i++) {
+			delete Minion.list[data.minion[i]];
+		}
+	});
+
+	socket.on('mapInit',function(data){
+
+		new Map(data.map[0]);
+
+	});
+
+	var focused = true;
+
+	setInterval(function(){
+		if(!selfId)
+			return;
+		ctx.clearRect(0,0,WIDTH,HEIGHT);
+
+
+		if(!gameOver){
+			for(var i in Map.list)
+				Map.list[i].draw();
+			drawScore();
+
+			var entities = [];
+			for(var i in Bullet.list)
+				entities.push(Bullet.list[i]);
+			for(var i in Minion.list)
+				entities.push(Minion.list[i]);
+			for(var i in Tower.list)
+				entities.push(Tower.list[i]);
+			for(var i in Base.list)
+				entities.push(Base.list[i]);
+			for(var i in Player.list)
+				entities.push(Player.list[i]);
+			//console.log(entities);
+			entities.sort(function (a, b) {
+				return a.y - b.y;
+			});
+
+			for (var i = 0; i < entities.length; i++) entities[i].draw();
+
+			if (!document.hasFocus() && focused === true) {
+				focused = false;
+				onLossOfFocus();
+			} else if (document.hasFocus() && !focused){
+				focused = true;
+			}
+		} else {
+			for(var i in Player.list){
+				Player.list[i].drawEnd();
+			}
+		}
+
+		//drawHud();
+	},40);
+
+	var drawHud = function(){
+
+		//ctx.drawImage(Img.hp,(WIDTH/2)-(Img.hp.width/2), HEIGHT-Img.hp.height);
+		//ct.fillStyle = 'black';
+		//ctx.fillRect(Img.hp,(WIDTH/2)-(Img.hp.width/2) +  20,HEIGHT-Img.hp.height + 20,350 - (,20 );
+	}
+
+	var drawScore = function(){
+		ctx.fillStyle = 'black';
+		ctx.fillText(Player.list[selfId].score,0,30);
+	}
+
+	document.onkeydown = function(event){
+		if(event.keyCode === 68)	//d
+			socket.emit('keyPress',{inputId:'right',state:true});
+		else if(event.keyCode === 83)	//s
+			socket.emit('keyPress',{inputId:'down',state:true});
+		else if(event.keyCode === 65) //a
+			socket.emit('keyPress',{inputId:'left',state:true});
+		else if(event.keyCode === 87) // w
+			socket.emit('keyPress',{inputId:'up',state:true});
+
+	}
+	document.onkeyup = function(event){
+		if(event.keyCode === 68)	//d
+			socket.emit('keyPress',{inputId:'right',state:false});
+		else if(event.keyCode === 83)	//s
+			socket.emit('keyPress',{inputId:'down',state:false});
+		else if(event.keyCode === 65) //a
+			socket.emit('keyPress',{inputId:'left',state:false});
+		else if(event.keyCode === 87) // w
+			socket.emit('keyPress',{inputId:'up',state:false});
+	}
+
+	document.onmousedown = function(event){
+		socket.emit('keyPress',{inputId:'attack',state:true});
+	}
+	document.onmouseup = function(event){
+		socket.emit('keyPress',{inputId:'attack',state:false});
+	}
+	document.onmousemove = function(event){
+
+		//var rect = ct.getBoundingClientRect();
+		//var top = rect.top;
+		//var right = rect.right;
+		var width = document.documentElement.clientWidth;
+        var height = document.documentElement.clientHeight;
+
+		var x = -(width / 2) + event.clientX;
+		var y = -(height / 2) + event.clientY;
+		var angle = Math.atan2(y,x) / Math.PI * 180;
+		socket.emit('keyPress',{inputId:'mouseAngle',state:angle});
+	}
+
+	var onLossOfFocus = function () {
+
+		socket.emit('keyPress', {inputId:'stop', state:false});
+	}
+
+
+</script>
